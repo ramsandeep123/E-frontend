@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <div className='group/card shadow-lg border hover:shadow-2xl duration-300 transition-all rounded-2xl space-y-4 h-full'>
       <Link
-        href={`${product.title}?productId=${product._id}`}
+        href={`/${4}/${product.title}?productId=${product._id}`}
       >
         {/* Images and Actions */}
         <div className='aspect-square m-3 rounded-2xl bg-gray-100 relative'>

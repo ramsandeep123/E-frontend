@@ -20,7 +20,7 @@ export default async function SignInPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className='grid grid-cols-1'>
-          <OAuthSignIn />
+          {/* <OAuthSignIn /> */}
         </CardContent>
         <CardFooter className='flex flex-wrap items-center justify-between gap-2'>
           <div className='text-sm text-muted-foreground'>
