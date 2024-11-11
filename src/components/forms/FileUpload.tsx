@@ -6,7 +6,7 @@ import toast from 'react-hot-toast'
 import { UploadFileResponse } from 'uploadthing/client'
 
 import { Button } from '@/components/ui/Button'
-import { UploadButton } from '@/lib/uploadthing'
+// import { UploadButton } from '@/lib/uploadthing'
 
 interface FileUploadProps {
   onChange: (value: UploadFileResponse[]) => void
@@ -48,7 +48,7 @@ export const FileUpload = ({
           ))}
         </div>
       ) : null}
-      <UploadButton
+      {/* <UploadButton
         endpoint={endpoint}
         onClientUploadComplete={(res) => {
           onChange(res!)
@@ -56,7 +56,7 @@ export const FileUpload = ({
         onUploadError={(error: Error) => {
           toast.error(error.message)
         }}
-      />
+      /> */}
     </>
   )
 }
