@@ -616,6 +616,8 @@ export async function POST(req: NextRequest) {
         const model = new ChatOpenAI({
             temperature: 0.8,
             model: "gpt-4o-mini",
+            apiKey: "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"
+
         });
 
         /**
