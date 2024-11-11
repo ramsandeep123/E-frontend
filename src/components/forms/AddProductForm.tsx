@@ -1,7 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Product } from '@prisma/client'
+
 import axios from 'axios'
 import { useParams, useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -46,7 +46,7 @@ export function AddProductForm() {
   const onSubmit = async (values: productPayload) => {
     try {
       setIsLoading(true)
-      const { data }: { data: Product } = await axios.post(
+      const { data }: { data: any } = await axios.post(
         `/api/stores/${params.storeId}/products`,
         values,
       )

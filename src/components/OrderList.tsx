@@ -1,7 +1,7 @@
 'use client'
 
 import { useIntersection } from '@mantine/hooks'
-import { Order } from '@prisma/client'
+
 import { useInfiniteQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { useSearchParams } from 'next/navigation'
@@ -12,7 +12,7 @@ import OrderCardSkeleton from '@/components/skeletons/OrderCardSkeleton'
 import { ORDER_INFINITE_SCROLL_LIMIT } from '@/config'
 
 interface OrdersListProps {
-  initialOrders: Order[]
+  initialOrders: any[]
   totalData: number
 }
 
@@ -37,7 +37,7 @@ const OrdersList: React.FC<OrdersListProps> = ({
         const { data } = await axios.get(
           `/api/orders?limit=${ORDER_INFINITE_SCROLL_LIMIT}&page=${pageParam}&status=${status}`,
         )
-        return data as Order[]
+        return data as any
       },
       initialPageParam: 1,
       getNextPageParam: (lastPage, allPages) => {

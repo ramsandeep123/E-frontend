@@ -1,7 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Store } from '@prisma/client'
+
 import axios from 'axios'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -22,7 +22,7 @@ import { storePayload, storeSchema } from '@/lib/validators/store'
 import { AlertModal } from '@/components/modals/AlertModal'
 
 interface UpdateStoreFormProps {
-  store: Store
+  store: any
 }
 
 export const UpdateStoreForm: React.FC<UpdateStoreFormProps> = ({ store }) => {

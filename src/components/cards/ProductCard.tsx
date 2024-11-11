@@ -1,6 +1,6 @@
 'use client'
 
-import { Category, Product } from '@prisma/client'
+
 import { ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'

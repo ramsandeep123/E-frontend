@@ -1,6 +1,6 @@
 'use client'
 
-import type { Order } from '@prisma/client'
+
 import { ShoppingBag } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,7 +13,7 @@ import { formatPrice } from '@/lib/utils'
 import { GetOrderItems } from '@/types/get-order-items'
 
 interface OrderCardProps {
-  order: Order
+  order: any
 }
 
 const OrderCard: React.FC<OrderCardProps> = ({ order }) => {
@@ -104,7 +104,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ order }) => {
           <div className='flex items-center justify-between py-3'>
             <p className='font-bold sm:text-xl mr-2'>Total :</p>
             <p className='text-right font-bold'>
-              {/* @ts-expect-error Decimal type */}
+
               {formatPrice(parseFloat(order.totalPrice))}
             </p>
           </div>

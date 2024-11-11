@@ -1,4 +1,4 @@
-import { Store } from '@prisma/client'
+
 import Link from 'next/link'
 
 import { AspectRatio } from '@/components/ui/AspectRatio'
@@ -14,7 +14,7 @@ import { getRandomPatternStyle } from '@/lib/generate-pattern'
 import { cn } from '@/lib/utils'
 
 interface StoreCardProps {
-  store: Store
+  store: any
 }
 
 export function StoreCard({ store }: StoreCardProps) {

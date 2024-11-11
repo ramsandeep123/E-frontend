@@ -1,7 +1,7 @@
 'use client'
 
 import { useIntersection } from '@mantine/hooks'
-import { Product } from '@prisma/client'
+
 import { useInfiniteQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { useSearchParams } from 'next/navigation'
@@ -12,7 +12,7 @@ import ProductCardSkeleton from '@/components/skeletons/ProductCardSkeleton'
 import { INFINITE_SCROLL_LIMIT } from '@/config'
 
 interface ProductsListProps {
-  initialProducts: Product[]
+  initialProducts: any[]
   totalData: number
 }
 

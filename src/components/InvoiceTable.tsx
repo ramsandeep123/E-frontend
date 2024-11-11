@@ -1,13 +1,13 @@
 'use client'
 
-import type { OrderItem, Product, Store } from '@prisma/client'
+
 import { useEffect, useState } from 'react'
 
 import { formatPrice } from '@/lib/utils'
 
-interface OrderItems extends OrderItem {
-  store: Store
-  product: Product
+interface OrderItems {
+  store: any
+  product: any
 }
 
 interface InvoiceTableProps {
@@ -33,12 +33,12 @@ const InvoiceTable: React.FC<InvoiceTableProps> = ({ orderItems }) => {
         <th>Quantity</th>
         <th>Price</th>
       </tr>
-      {orderItems.map((item) => (
+      {orderItems.map((item: any) => (
         <tr key={item.id} className='border-t border-b'>
           <td className='py-2'>{item.product.name}</td>
           <td>{item.store.name}</td>
           <td>1</td>
-          {/* @ts-expect-error Decimal type */}
+
           <td>{formatPrice(parseFloat(item.product.price))} x 1</td>
         </tr>
       ))}

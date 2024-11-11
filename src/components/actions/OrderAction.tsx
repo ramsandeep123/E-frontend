@@ -1,6 +1,6 @@
 'use client'
 
-import type { Order } from '@prisma/client'
+
 import axios, { AxiosError } from 'axios'
 import { CreditCard, MoreVertical, ScanEye, XCircle } from 'lucide-react'
 import { useRouter } from 'next/navigation'
@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/DropdownMenu'
 
 interface OrderActionProps {
-  order: Order
+  order: any
 }
 
 export const OrderAction: React.FC<OrderActionProps> = ({ order }) => {

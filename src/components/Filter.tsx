@@ -1,6 +1,6 @@
 'use client'
 
-import { Category } from '@prisma/client'
+
 import { Plus } from 'lucide-react'
 import { useSearchParams } from 'next/navigation'
 import { useState } from 'react'
@@ -11,7 +11,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/Sheet'
 import { cn } from '@/lib/utils'
 
 interface FilterProps extends React.HTMLAttributes<HTMLDivElement> {
-  categories: Category[]
+  categories: any[]
 }
 
 const Filter: React.FC<FilterProps> = ({ categories, className, ...props }) => {

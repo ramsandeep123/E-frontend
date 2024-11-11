@@ -1,4 +1,4 @@
-import { Category } from '@prisma/client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -12,7 +12,7 @@ import {
 
 
 interface CategoryCardProps {
-  category: Category
+  category: any
 }
 
 const CategoryCard: React.FC<CategoryCardProps> = async ({ category }) => {

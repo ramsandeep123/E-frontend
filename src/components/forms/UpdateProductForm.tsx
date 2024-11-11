@@ -1,7 +1,7 @@
 'use client'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Product } from '@prisma/client'
+
 import axios from 'axios'
 import { useParams } from 'next/navigation'
 import { useState } from 'react'
@@ -30,7 +30,7 @@ import { productPayload, productSchema } from '@/lib/validators/product'
 
 import { FileUpload } from './FileUpload'
 
-export function UpdateProductForm({ product }: { product: Product }) {
+export function UpdateProductForm({ product }: { product: any }) {
   const params = useParams()
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
