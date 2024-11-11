@@ -69,7 +69,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ order }) => {
                   <div className='relative h-20 w-20 rounded-md overflow-hidden sm:h-40 sm:w-40'>
                     <Image
                       fill
-                      src={item.product.images[0].url}
+                      src={item.image}
                       alt='fasfasd'
                       className='object-cover object-center'
                     />
@@ -77,7 +77,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ order }) => {
                   <div className='ml-4 flex flex-1 flex-col justify-between sm:ml-6'>
                     <div className='relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0'>
                       <Link
-                        href={`/${item.storeId}/${item.product.slug}?productId=${item.productId}`}
+                        href={`${item.product.slug}?productId=${item.productId}`}
                         className='sm:text-lg font-semibold text-black line-clamp-2'
                       >
                         {item.product.name}
