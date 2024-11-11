@@ -104,9 +104,9 @@ const SearchButton = () => {
               <Skeleton className='h-8 rounded-sm' />
             </div>
           ) : (
-            data?.map((group) => (
+            data?.map((group, index) => (
 
-              <div onClick={() => setOpen(!open)}>
+              <div onClick={() => setOpen(!open)} key={index}>
                 < ProductCard product={group} />
               </div>
 
