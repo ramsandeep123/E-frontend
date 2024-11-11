@@ -64,7 +64,7 @@ const OrderCard: React.FC<OrderCardProps> = ({ order }) => {
         <ul>
           {!isLoading ? (
             <>
-              {orderItems?.map((item, i) => (
+              {orderItems?.map((item: any, i: any) => (
                 <li key={i} className='flex py-3 border-b'>
                   <div className='relative h-20 w-20 rounded-md overflow-hidden sm:h-40 sm:w-40'>
                     <Image
