@@ -1,4 +1,5 @@
-import Chatbot from "../chatbot/Chatbot"
+import Chatbot from "../newchatBot/RenderChatbot"
+// import { ChatBot } from "../newchatBot"
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="me-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
-        <Chatbot />
+        <Chatbot/>
         <div className="flex justify-center">
           <a href="#!" className="me-6 [&>svg]:h-4 [&>svg]:w-4">
             <svg

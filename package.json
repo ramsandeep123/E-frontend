@@ -13,6 +13,7 @@
     "seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.21.0",
     "@headlessui/react": "^1.7.17",
     "@hookform/resolvers": "^3.3.2",
     "@langchain/core": "^0.3.17",
